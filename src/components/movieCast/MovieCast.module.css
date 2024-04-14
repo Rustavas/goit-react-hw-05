@@ -1,0 +1,20 @@
+.list{
+  list-style: none;
+}
+.image{
+  width: 150px;
+  margin: 5px;
+  padding-left: 25px;
+}
+.actorName{
+  margin: 5px;
+  padding-left: 15px;
+  font-size: 10px;
+  line-height: 1.1;
+}
+.character{
+  margin: 5px;
+  padding-left: 25px;
+  font-size: 10px;
+  line-height: 1.1;
+}

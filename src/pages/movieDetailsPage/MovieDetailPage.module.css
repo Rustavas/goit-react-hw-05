@@ -1,0 +1,84 @@
+.wrapper{
+  padding: 0 10px;
+}
+.poster{
+  width: 250px;
+  margin-bottom: 10px;
+}
+.link{
+  display: inline-block;
+  padding: 5px 20px;
+  font-size: 12px;
+  line-height: 1.1;
+  color: rgb(0, 0, 0, 0.9);
+  text-decoration: none;
+}
+.wrap{
+  display: flex;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+}
+.box{
+  padding: 10px;
+}
+.title{
+  display: inline-block;
+  margin: 10px 0;
+  font-size: 16px;
+  font-weght: 400;
+}
+.subject{
+  display: block;
+  margin-bottom: 10px;
+  font-size:12px;
+}
+.overview{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.1;
+}
+.text{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.1;
+}
+.list{
+  display: flex;
+  line-height: 1.1;
+}
+.genres{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.item{
+  list-style: none;
+}
+.genreName{
+  display: inline-block;
+  padding-right: 3px;
+  font-size: 12px;
+  line-height: 1.1;
+}
+.additional{
+margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.1;
+}
+.links{
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.1;
+  color: rgb(0, 0, 205);
+  text-decoration: underline;
+}
+.point{
+  color: rgb(0, 0, 205);
+}
+.underline{
+  display: block;
+  margin-bottom: 10px ;
+  padding: 15px;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.5);
+}
