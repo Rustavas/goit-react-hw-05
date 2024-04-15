@@ -3,9 +3,9 @@ import axios from 'axios';
 const BASE_URL = "https://api.themoviedb.org/3/";
 
 const params = {
-  language: "en-US",
-  include_adult: false,
-  page: 1,
+  "language": "en-US",
+  "include_adult": false,
+  "page": 1,
 };
 
 const options = {
@@ -44,4 +44,4 @@ const getMovieReviews = async (movieId) => {
   const { data } = await axios.get(urlReviews, options);
   return data;
 };
-export { getTrandingMovies, getMoviesByQuery , getMoviesById, getMovieCast, getMovieReviews };
+export { getTrandingMovies, getMoviesByQuery, getMoviesById, getMovieCast, getMovieReviews };

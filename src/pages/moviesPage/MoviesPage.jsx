@@ -41,9 +41,9 @@ fetchMoviesByQuery ()
       <SearchBar onSubmit={handleSubmit}/>
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
-      <MovieList 
+      {movies.length !== 0 && <MovieList 
         movies={movies}
-      />
+      />}
     </div>    
   )
 }

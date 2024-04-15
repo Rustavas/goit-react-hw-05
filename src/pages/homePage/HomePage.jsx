@@ -33,9 +33,9 @@ const HomePage = () => {
       <h1 className={css.title}>Trending today</h1>
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
-      <MovieList 
+      {movies.length !== 0 && <MovieList 
         movies={movies}
-      />
+      />}
     </div>
   )
 }

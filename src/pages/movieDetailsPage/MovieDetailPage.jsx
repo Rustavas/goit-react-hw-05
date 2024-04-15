@@ -38,7 +38,7 @@ const MovieDetailPage = () => {
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       <Link to={backLinkRef.current} className={css.link}>⬅︎ Go back</Link>
-      {movieDetails!== null && (
+      {movieDetails !== null && (
         <div className={css.wrapper}>
           <div className={css.wrap}>
             <img className={css.poster} src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} alt={movieDetails.title} />
@@ -51,7 +51,7 @@ const MovieDetailPage = () => {
               <ul className={css.list}>
                 {movieDetails.genres &&
                   movieDetails.genres.map((genre) => (
-                    <li key={genre.id} className={css.item}><p className={css.genreName}> {genre.name} </p></li>
+                    <li key={genre.id} className={css.item}><p className={css.genreName}> {genre.name}</p></li>
                   ))}
               </ul>
             </div>

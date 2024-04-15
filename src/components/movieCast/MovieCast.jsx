@@ -26,12 +26,12 @@ const MovieCast = () => {
       }
     }
     fetchMovieCast()
-  }, [roles]) 
+  }, [movieId]) 
   return (
     <div>
       {isLoading && <Loader />}
       {isError && <ErrorMessage />}
-      <ul className={css.list}>
+      {roles.length !== 0 && (<ul className={css.list}>
         {roles.map((actor) => (
           <li key={actor.id}>
             <img
@@ -43,7 +43,7 @@ const MovieCast = () => {
             <p className={css.character}>Character: {actor.character}</p>
           </li>
         ))}
-      </ul>
+      </ul>)}
     </div>
   )
 }

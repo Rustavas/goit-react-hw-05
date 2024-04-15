@@ -17,7 +17,7 @@ const MovieReviews = () => {
   useEffect(()=>{
     async function fetchMovieReviews() {
       try{
-        setIsLoading(true)
+       setIsLoading(true)
        const{ results } = await getMovieReviews(movieId)
        setReviews(results)
       }catch (error){
@@ -27,18 +27,18 @@ const MovieReviews = () => {
       }
     }
     fetchMovieReviews()
-  }, [reviews])
+  }, [movieId])
 
   return (
     <div className={css.wrapper}>
-      {setIsLoading && <Loader />}
+      {isLoading && <Loader />}
       {isError && <ErrorMessage />}
       {reviews.length === 0 ? <p>We don't have any reviews for this movie.</p> : 
         <ul className={css.list}>
           {reviews.map((review) => (
             <li key = {review.id}>
               <p className={css.username}>・ Author: {review.author_details.username}.</p>
-              <text className={css.text}>{review.content}</text>
+              <p className={css.text}>{review.content}</p>
             </li>
           ))}
         </ul>
