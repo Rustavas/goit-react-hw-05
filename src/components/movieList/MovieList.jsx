@@ -1,10 +1,9 @@
 import { useRef } from "react";
-import { Link, useParams, useLocation} from "react-router-dom"
+import { Link, useLocation} from "react-router-dom"
 
 import css from "./MovieList.module.css"
 
 const MovieList = ({ movies }) => {
-  const {movieId} = useParams();
   const location = useLocation();
 
   return (
