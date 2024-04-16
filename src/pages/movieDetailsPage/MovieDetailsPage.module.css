@@ -66,12 +66,15 @@ margin-bottom: 10px;
   font-size: 12px;
   line-height: 1.1;
 }
+
 .links{
   display: inline-block;
   font-size: 14px;
   line-height: 1.1;
   color: rgb(0, 0, 205);
   text-decoration: underline;
+  margin: 0;
+  padding: 0;
 }
 .point{
   color: rgb(0, 0, 205);

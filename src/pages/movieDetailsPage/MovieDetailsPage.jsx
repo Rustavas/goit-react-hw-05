@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef } from "react";
 import { useState } from "react";
-import { Link, Route, Routes,useLocation,useParams } from "react-router-dom";
+import { Link, NavLink, Outlet, Route, Routes,useLocation,useParams } from "react-router-dom";
 
 import Loader from "../../components/loader/Loader";
 import ErrorMessage from "../../components/errorMessage/ErrorMessage";
@@ -8,9 +8,9 @@ import { getMoviesById } from "../../servises/api"
 const MovieCast = lazy (() => import("../../components/movieCast/MovieCast"))
 const MovieReviews  = lazy (() => import("../../components/movieReviews/MovieReviews"))
 
-import css from "./MovieDetailPage.module.css"
+import css from "./MovieDetailsPage.module.css"
 
-const MovieDetailPage = () => {
+const MovieDetailsPage = () => {
   const {movieId} = useParams();
   const [movieDetails, setMovieDetails] = useState(null);
   const [isLoading, setIsloading] = useState(false);
@@ -58,15 +58,20 @@ const MovieDetailPage = () => {
           </div>
           <div className={css.underline}>
             <p className={css.additional}>Additional information</p>
-            <span className={css.point}>・</span><Link to="cast" className={css.links}>Cast</Link><br/>
-            <span className={css.point}>・</span><Link to="reviews" className={css.links} >Reviews</Link>
+            <ul>
+              <li >
+                <NavLink className={css.links} to={`/movies/${movieId}/cast`}>
+                  Cast
+                </NavLink>
+              </li>
+              <li>
+                <NavLink className={css.links} to={`/movies/${movieId}/reviews`}>
+                  Reviews
+                </NavLink>
+              </li>
+            </ul>
           </div>
-          <Suspense fallback={<Loader />}>
-            <Routes>
-              <Route path="cast" element={<MovieCast />}></Route>
-              <Route path="reviews" element={<MovieReviews />}></Route>
-            </Routes>
-          </Suspense>
+          <Outlet />
         </div>
       )
       }
@@ -74,5 +79,5 @@ const MovieDetailPage = () => {
   )
 }
 
-export default MovieDetailPage
+export default MovieDetailsPage
 
